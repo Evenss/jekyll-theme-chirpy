@@ -4,7 +4,7 @@ name: Pages Deploy
 on:
   push:
     branches:
-      - master  # 注意：有些 fork 是 main，按你仓库的默认分支调整
+      - master
 
 jobs:
   build:
