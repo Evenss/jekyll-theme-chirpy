@@ -1,9 +1,9 @@
 
 
 {
-  "name": "Chirpy",
-  "short_name": "Chirpy",
-  "description": "A minimal, responsive and feature-rich Jekyll theme for technical writing.",
+  "name": "Evenss AI Blog",
+  "short_name": "Evenss AI Blog",
+  "description": "A technical blog about AI, LLMs, and machine learning engineering.",
   "icons": [
     {
       "src": "/assets/img/favicons/web-app-manifest-192x192.png",
