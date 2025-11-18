@@ -1334,17 +1334,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -1582,9 +1571,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2386 words"
+  title="2124 words"
 >
-  <em>13 min</em> read</span>
+  <em>11 min</em> read</span>
 
         </div>
       </div>
@@ -1665,16 +1654,6 @@
 
 <font style="color:rgb(17, 17, 51);">Simply put, you can think of AI Memory as the model "remembering" what it has discussed with you, while RAG is the model "looking up information" when answering your questions to ensure correctness. An intelligent AI assistant will likely use both capabilities simultaneously.</font>
 
-<h2 id="differences"><span class="me-2">Differences</span><a href="#differences" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>| <strong><font style="color:rgb(17, 17, 51);">Feature</font></strong> | <strong><font style="color:rgb(17, 17, 51);">AI Memory</font></strong> | <strong><font style="color:rgb(17, 17, 51);">RAG (Retrieval-Augmented Generation)</font></strong> |
-| :— | :— | :— |
-| <strong><font style="color:rgb(17, 17, 51);">Core Mechanism</font></strong> | <font style="color:rgb(17, 17, 51);">Influences future outputs by storing and retrieving the model's own</font><strong><font style="color:rgb(17, 17, 51);"> interaction history or internal knowledge</font></strong><font style="color:rgb(17, 17, 51);">. Memory can be short-term (e.g., conversation context) or long-term (e.g., past experiences stored in vector databases).</font> | <font style="color:rgb(17, 17, 51);">Before generating a response, retrieves relevant information from</font><strong><font style="color:rgb(17, 17, 51);"> external knowledge bases</font></strong><font style="color:rgb(17, 17, 51);"> (e.g., documents, databases, web pages) and uses the retrieved content as context input to the model.</font> |
-| <strong><font style="color:rgb(17, 17, 51);">Knowledge Source</font></strong> | <font style="color:rgb(17, 17, 51);">Primarily from the model's</font><strong><font style="color:rgb(17, 17, 51);"> interaction history</font></strong><font style="color:rgb(17, 17, 51);"> with users or system-preset long-term memory.</font> | <font style="color:rgb(17, 17, 51);">From</font><strong><font style="color:rgb(17, 17, 51);"> external, independent, typically structured knowledge bases</font></strong><font style="color:rgb(17, 17, 51);">.</font> |
-| <strong><font style="color:rgb(17, 17, 51);">Primary Purpose</font></strong> | 1. <strong><font style="color:rgb(17, 17, 51);">Maintain context consistency</font></strong><font style="color:rgb(17, 17, 51);"> (e.g., multi-turn conversations).</font><br />2. <strong><font style="color:rgb(17, 17, 51);">Personalization</font></strong><font style="color:rgb(17, 17, 51);"> (remembering user preferences).</font><br />3. <font style="color:rgb(17, 17, 51);"></font><strong><font style="color:rgb(17, 17, 51);">Learning and adaptation</font></strong><font style="color:rgb(17, 17, 51);"> (learning from past experiences).</font> | 1. <strong><font style="color:rgb(17, 17, 51);">Provide latest, accurate factual information</font></strong><font style="color:rgb(17, 17, 51);">.</font><br />2. <font style="color:rgb(17, 17, 51);"> </font><strong><font style="color:rgb(17, 17, 51);">Reduce hallucinations</font></strong><font style="color:rgb(17, 17, 51);"> (generating based on retrieved real information).</font><br />3. <strong><font style="color:rgb(17, 17, 51);">Extend model knowledge boundaries</font></strong><font style="color:rgb(17, 17, 51);"> (accessing information beyond training data).</font> |
-| <strong><font style="color:rgb(17, 17, 51);">Knowledge Updates</font></strong> | <font style="color:rgb(17, 17, 51);">Memory can be dynamically updated, but requires managing memory</font><strong><font style="color:rgb(17, 17, 51);"> storage, retrieval, and forgetting</font></strong><font style="color:rgb(17, 17, 51);">. Updates may affect model behavior.</font> | <font style="color:rgb(17, 17, 51);">Knowledge bases can be updated independently without retraining the model. Updates are</font><strong><font style="color:rgb(17, 17, 51);"> decoupled</font></strong><font style="color:rgb(17, 17, 51);"> from the model.</font> |
-| <strong><font style="color:rgb(17, 17, 51);">Implementation</font></strong> | + <strong><font style="color:rgb(17, 17, 51);">Short-term memory</font></strong><font style="color:rgb(17, 17, 51);">: Directly using the model's context window.</font><br />+ <strong><font style="color:rgb(17, 17, 51);">Long-term memory</font></strong><font style="color:rgb(17, 17, 51);">: Using vector databases to store and retrieve key information fragments.</font> | + <strong><font style="color:rgb(17, 17, 51);">Retriever</font></strong><font style="color:rgb(17, 17, 51);"> (e.g., vector-based similarity search).</font><br />+ <strong><font style="color:rgb(17, 17, 51);">Generator</font></strong><font style="color:rgb(17, 17, 51);"> (large language model).</font><br />+ <strong><font style="color:rgb(17, 17, 51);">Knowledge base</font></strong><font style="color:rgb(17, 17, 51);"> (document collection).</font> |
-| <strong><font style="color:rgb(17, 17, 51);">Typical Applications</font></strong> | <font style="color:rgb(17, 17, 51);">Chatbots maintaining conversation coherence, personalized assistants, AI agents requiring long-term learning.</font> | <font style="color:rgb(17, 17, 51);">Question-answering systems, customer service knowledge bases, fact-checking, report generation (requiring external references).</font> |</p>
-
 <h1 id="memory-implementation">Memory Implementation</h1>
 <h2 id="mem0"><span class="me-2">Mem0</span><a href="#mem0" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <p><a href="https://intranetproxy.alipay.com/skylark/lark/0/2025/png/121056529/1758008181340-7a31ba73-2ef0-43b0-9546-7726281b4aa4.png" class="popup img-link shimmer"><img src="https://intranetproxy.alipay.com/skylark/lark/0/2025/png/121056529/1758008181340-7a31ba73-2ef0-43b0-9546-7726281b4aa4.png" alt="" loading="lazy"></a></p>
@@ -1682,8 +1661,8 @@
 <h3 id="components"><span class="me-2"><font style="color:rgb(65, 65, 69);">Components</font></span><a href="#components" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <ul>
   <li>
-    <font style="color:rgb(65, 65, 69);">L</font>
-    <p>LM (OpenAI, Ollama, Azure OpenAI, Gemini, DeepSeek, and 18 other types)</p>
+    <font style="color:rgb(65, 65, 69);">LLM (OpenAI, Ollama, Azure OpenAI, Gemini, DeepSeek, and 18 other types)
+</font>
   </li>
   <li>
     <font style="color:rgb(65, 65, 69);">Vector databases</font>
@@ -1972,7 +1951,8 @@
     <span class="k">return</span> <span class="n">result_relations</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="powermem"><span class="me-2"><font style="color:rgb(62, 62, 62);">PowerMem</font></span><a href="#powermem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="powermem"><span class="me-2"><font style="color:rgb(62, 62, 62);">🌟PowerMem🌟</font></span><a href="#powermem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>GitHub: <a href="https://github.com/alibaba/PowerMem">https://github.com/oceanbase/PowerMem</a></p>
 <h3 id="performance-improvements"><span class="me-2">Performance Improvements</span><a href="#performance-improvements" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <h4 id="multi-path-retrievalhybrid-search"><span class="me-2">Multi-path Retrieval/Hybrid Search</span><a href="#multi-path-retrievalhybrid-search" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 <p><strong>Flow Diagram</strong></p>
