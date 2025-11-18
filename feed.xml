@@ -4,7 +4,7 @@
   <id>https://evenss.github.io/</id>
   <title>Evenss AI Blog</title>
   <subtitle>A technical blog about AI, LLMs, and machine learning engineering.</subtitle>
-  <updated>2025-11-18T14:53:56+08:00</updated>
+  <updated>2025-11-18T16:40:59+08:00</updated>
   <author>
     <name>oneLineEven</name>
     <uri>https://evenss.github.io/</uri>
@@ -17,6 +17,28 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Ai Memory</title>
+    <link href="https://evenss.github.io/posts/ai-memory/" rel="alternate" type="text/html" title="Ai Memory" />
+    <published>2025-11-18T00:00:00+08:00</published>
+  
+    <updated>2025-11-18T00:00:00+08:00</updated>
+  
+    <id>https://evenss.github.io/posts/ai-memory/</id>
+    <content type="text/html" src="https://evenss.github.io/posts/ai-memory/" />
+    <author>
+      <name>oneLineEven</name>
+    </author>
+
+  
+    
+  
+
+  <summary>Introduction to Memory Agent Architecture   (From The Rise and Potential of Large Language Model Based Agents: A Survey):     Perception: Information input.   Brain-Decision Making: Autonomous decision-making and planning, executing more complex tasks.   Brain-Memory &amp;amp; Knowledge: Memory capability, storing Agent’s knowledge and skills.   Action: Interacting with the external world, enabling...</summary>
+
+  </entry>
 
 </feed>
 
